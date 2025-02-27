@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+  "docker:start": "docker compose up -d",
+  "dev": "npm run docker:start && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
