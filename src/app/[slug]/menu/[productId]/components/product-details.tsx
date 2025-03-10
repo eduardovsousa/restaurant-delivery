@@ -72,7 +72,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
                 <ChevronLeftIcon />
               </Button>
               <p className="w-5">{quantity}</p>
-              <Button variant="destructive" className="h-8 w-8 rounded-xl" onClick={handleIncreaseQuantity}>
+              <Button variant="default" className="h-8 w-8 rounded-xl" onClick={handleIncreaseQuantity}>
                 <ChevronRightIcon />
               </Button>
             </div>
