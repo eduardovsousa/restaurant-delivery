@@ -119,8 +119,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                     <FormMessage />
                   </FormItem>
                 )}
-              >
-              </FormField>
+              />
 
               <DrawerFooter>
                 <Button type="submit" className="rounded-full" disabled={isPending}>

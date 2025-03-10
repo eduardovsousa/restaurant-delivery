@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { formatCurrency } from "@/helpers/format-currency";
 
@@ -20,7 +21,7 @@ const CartSheet = () => {
           <SheetTitle className="text-left">Sacola</SheetTitle>
         </SheetHeader>
         <div className="flex flex-col h-full py-5">
-          <div className="flex-auto">
+          <div className="flex-auto space-y-5">
             {products.map(product => (
               <CartItem product={product} key={product.id} />
             ))}
@@ -28,10 +29,11 @@ const CartSheet = () => {
 
           <Card className="mb-6">
             <CardContent className="p-5 flex flex-col gap-5">
-              <div className="flex justify-between border-b">
+              <div className="flex justify-between">
                 <p className="text-sm text-muted-foreground">Descontos</p>
                 <p className="text-sm font-semibold">{formatCurrency(0)}</p>
               </div>
+              <Separator />
               <div className="flex justify-between">
                 <p className="text-sm text-muted-foreground">Total</p>
                 <p className="text-sm font-semibold">{formatCurrency(total)}</p>
