@@ -1,4 +1,6 @@
+import { ChevronLeftIcon } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 
 import { getRestaurantBySlug } from "@/data/get-restaurant-by-slug"
@@ -10,13 +12,17 @@ interface RestaurantPageProps {
 }
 
 const RestaurantPage = async ({ params }: RestaurantPageProps) => {
-  const { slug } = await params
+  const { slug } = await params;
 
   const restaurant = await getRestaurantBySlug(slug)
 
   if (!restaurant) return notFound()
   return (
     <div className="h-screen flex flex-col items-center justify-center px-6 pt-24">
+      <Link href={"/"} className="absolute top-4 left-4 rounded-full z-50">
+        <ChevronLeftIcon size={24} />
+      </Link>
+
       <div className="flex flex-col items-center gap-2">
         <Image src={restaurant?.avatarImageUrl} alt={restaurant?.name} width={82} height={82} />
         <h2 className="font-semibold">
@@ -26,7 +32,7 @@ const RestaurantPage = async ({ params }: RestaurantPageProps) => {
 
       <div className="pt-24 text-center space-y-2">
         <h3 className="text-2xl font-semibold">
-          Seja bem-bindo!
+          Seja bem-vindo(a)!
         </h3>
         <p className="opacity-55">
           Escolha como prefere aproveitar sua refeição. Estamos aqui para oferecer praticidade e sabor em cada detalhe!

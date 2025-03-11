@@ -13,8 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "MC Donalds",
-  description: "O melhor fast food do mundo",
+  title: "Restaurant Delivery",
+  description: "O melhor app de delivery!",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${poppins.className} antialiased`}>
         <CartProvider>
           {children}
