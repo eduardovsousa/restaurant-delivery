@@ -61,7 +61,7 @@ const OrderList = ({ orders }: OrderListProps) => {
 
             <div className="flex items-center gap-2">
               <div className="relative h-5 w-5">
-                <Image src={order.restaurant.avatarImageUrl} alt={order.restaurant.name} fill className="rounded-full" />
+                <Image src={order.restaurant.avatarImageUrl} alt={order.restaurant.name} sizes="10000" fill className="rounded-full" />
               </div>
               <p className="text-sm font-semibold">{order.restaurant.name}</p>
             </div>

@@ -23,7 +23,7 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
       <Button variant="secondary" size="icon" className="absolute top-4 left-4 rounded-full z-50" onClick={handleBackClick}>
         <ChevronLeftIcon />
       </Button>
-      <Image src={product.imageUrl} alt={product.name} fill className="object-contain" />
+      <Image src={product.imageUrl} alt={product.name} fill priority sizes="10000" className="object-contain" />
       <Button variant="secondary" size="icon" className="absolute top-4 right-4 rounded-full z-50" onClick={handleOrdersClick}>
         <ScrollTextIcon />
       </Button>

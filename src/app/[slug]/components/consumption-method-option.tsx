@@ -16,18 +16,18 @@ interface ConsumptionMethodOptionProps {
 const ConsumptionMethodOption = ({ imageUrl, imageAlt, buttonText, option, slug }: ConsumptionMethodOptionProps) => {
   return (
     <Card>
-    <CardContent className="flex flex-col items-center gap-8 py-8">
-      <div className="relative h-[80px] w-[80px]">
+      <Link href={`${slug}/menu?consumptionMethod=${option}`}>
+        <CardContent className="flex flex-col items-center gap-8 py-8">
+          <div className="relative h-[80px] w-[80px]">
 
-        <Image src={imageUrl} alt={imageAlt} fill className="object-contain" />
-      </div>
-      <Button variant="secondary" className="rounded-full" asChild>
-        <Link href={`${slug}/menu?consumptionMethod=${option}`}>
-        {buttonText}
-        </Link>
-      </Button>
-    </CardContent>
-  </Card>
+            <Image src={imageUrl} alt={imageAlt} sizes="10000" fill className="object-contain" />
+          </div>
+          <Button variant="secondary" className="rounded-full" >
+            {buttonText}
+          </Button>
+        </CardContent>
+      </Link>
+    </Card>
   )
 }
 

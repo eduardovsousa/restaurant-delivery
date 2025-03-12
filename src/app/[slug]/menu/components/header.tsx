@@ -23,7 +23,7 @@ const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => {
       <Button variant="secondary" size="icon" className="absolute top-4 left-4 rounded-full z-50" onClick={handleBackClick}>
         <ChevronLeftIcon />
       </Button>
-      <Image src={restaurant.coverImageUrl} alt={restaurant.name} fill className="object-cover" />
+      <Image src={restaurant.coverImageUrl} alt={restaurant.name} fill sizes="10000" priority className="object-cover" />
       <Button variant="secondary" size="icon" className="absolute top-4 right-4 rounded-full z-50" onClick={handleOrdersClick}>
         <ScrollTextIcon />
       </Button>

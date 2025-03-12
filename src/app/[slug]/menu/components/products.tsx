@@ -28,6 +28,7 @@ const Products = ({ products }: ProductsProps) => {
             <Image
               src={product.imageUrl}
               alt={product.name}
+              sizes="10000"
               fill
               className="rounded-lg object-contain"
             />

@@ -18,7 +18,7 @@ const CartProductItem = ({ product }: CartProductItemProps) => {
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-3">
         <div className="relative h-20 w-20 bg-gray-100 rounded-xl">
-          <Image src={product.imageUrl} alt={product.name} fill />
+          <Image src={product.imageUrl} alt={product.name} fill sizes="10000" />
         </div>
         <div className="space-y-1">
           <p className="text-xs max-w-[90%] truncate text-ellipsis">{product.name}</p>
